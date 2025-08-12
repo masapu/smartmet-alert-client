@@ -18,7 +18,10 @@
               'focus-ring',
               'd-none',
             ]"
+            role="button"
             tabindex="0"
+            :aria-pressed="input.visible ? 'true' : 'false'"
+            :aria-label="title.replace(/&[^;]*;/g, '')"
             @mousedown="preventEvents"
             @click="toggle"
             @keydown.enter="toggle"
