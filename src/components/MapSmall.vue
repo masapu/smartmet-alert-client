@@ -176,8 +176,11 @@ export default {
     size() {
       return 'Small'
     },
+    strokeColor() {
+     return 'DarkSlateGray'
+    },
     strokeWidth() {
-      return 0.3
+      return 0.6
     },
   },
   watch: {
