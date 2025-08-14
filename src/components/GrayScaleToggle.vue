@@ -12,7 +12,9 @@
         @mousedown="preventEvents"
         @click="toggleGrayScale"
         @keydown.enter="toggleGrayScale"
-        @keydown.space="toggleGrayScale" />
+        @keydown.space="toggleGrayScale">
+            {{ grayScale ? 'ON' : 'OFF' }}
+        </div>
     </div>
   </div>
 </template>
@@ -93,7 +95,7 @@ div#gray-scale-select-text {
 
 div#gray-scale-select-container {
   display: table-cell;
-  width: 30px;
+  width: 55px;
   height: $symbol-list-line-height;
   vertical-align: middle;
 }
@@ -101,10 +103,23 @@ div#gray-scale-select-container {
 div#gray-scale-select {
   width: 100%;
   height: $symbol-list-select-height;
+  line-height: $symbol-list-select-height;
   margin: 0;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  font-family: "Noto Sans", sans-serif;
+  color: $white;
+  font-size: 1rem;
+  forced-color-adjust: none;
+  &.gray-scale-selected {
+    text-align: right;
+    padding-right: 22px;
+  }
+  &.gray-scale-unselected {
+    text-align: left;
+    padding-left: 22px;
+  }
 }
 
 .light-theme .gray-scale-selected {
