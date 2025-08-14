@@ -25,7 +25,9 @@
             @mousedown="preventEvents"
             @click="toggle"
             @keydown.enter="toggle"
-            @keydown.space="toggle" />
+            @keydown.space="toggle">
+                {{ input.visible ? 'ON' : 'OFF' }}
+            </div>
         </div>
       </div>
       <hr />
@@ -180,7 +182,7 @@ div.symbol-list-text {
 }
 
 .symbol-list-select-container {
-  width: 30px;
+  width: 55px;
   height: $symbol-list-line-height;
   display: table-cell;
   vertical-align: middle;
@@ -189,13 +191,25 @@ div.symbol-list-text {
 .symbol-list-select {
   width: 100%;
   height: $symbol-list-select-height;
+  line-height: $symbol-list-select-height;
   margin: 0;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.flag-selected {
-  cursor: pointer;
+  &.flag-selected, &.flag-unselected{
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    color: $white;
+    font-size: 1rem;
+    forced-color-adjust: none;
+  }
+  &.flag-selected {
+    text-align: right;
+    padding-right: 22px;
+  }
+  &.flag-unselected {
+    text-align: left;
+    padding-left: 22px;
+  }
 }
 
 .light-theme .flag-selected {
@@ -212,10 +226,6 @@ div.symbol-list-text {
 
 .dark-gray-theme .flag-selected {
   background-image: url($ui-image-path + 'toggle-selected-light' + $image-extension);
-}
-
-.flag-unselected {
-  cursor: pointer;
 }
 
 .light-theme .flag-unselected {
