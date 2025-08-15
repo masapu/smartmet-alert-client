@@ -8,7 +8,10 @@
           'focus-ring',
           grayScale ? 'gray-scale-selected' : 'gray-scale-unselected',
         ]"
+        role="button"
         tabindex="0"
+        :aria-pressed="grayScale ? 'true' : 'false'"
+        :aria-label="grayScaleText"
         @mousedown="preventEvents"
         @click="toggleGrayScale"
         @keydown.enter="toggleGrayScale"
