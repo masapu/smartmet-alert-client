@@ -213,31 +213,31 @@ div.symbol-list-text {
 }
 
 .light-theme .flag-selected {
-  background-image: url($ui-image-path + 'toggle-selected-blue' + $image-extension);
+  background-image: url($ui-image-path + 'toggle-selected-green' + $image-extension);
 }
 
 .dark-theme .flag-selected {
-  background-image: url($ui-image-path + 'toggle-selected-light' + $image-extension);
+  background-image: url($ui-image-path + 'toggle-selected-green' + $image-extension);
 }
 
 .light-gray-theme .flag-selected {
-  background-image: url($ui-image-path + 'toggle-selected-dark' + $image-extension);
+  background-image: url($ui-image-path + 'toggle-selected-gray' + $image-extension);
 }
 
 .dark-gray-theme .flag-selected {
-  background-image: url($ui-image-path + 'toggle-selected-light' + $image-extension);
+  background-image: url($ui-image-path + 'toggle-selected-gray' + $image-extension);
 }
 
 .light-theme .flag-unselected {
-  background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
+  background-image: url($ui-image-path + 'toggle-unselected-red' + $image-extension);
 }
 
 .dark-theme .flag-unselected {
-  background-image: url($ui-image-path + 'toggle-unselected-dark' + $image-extension);
+  background-image: url($ui-image-path + 'toggle-unselected-red' + $image-extension);
 }
 
 .light-gray-theme .flag-unselected {
-  background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
+  background-image: url($ui-image-path + 'toggle-unselected-gray' + $image-extension);
 }
 
 .dark-gray-theme .flag-unselected {
