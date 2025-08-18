@@ -22,6 +22,7 @@
         <b-button
           block
           :class="['legends-toggle', visible ? '' : 'collapsed']"
+          :aria-label="toggleLegendsText"
           @click="onLegendToggle" />
       </b-card-header>
       <b-collapse
