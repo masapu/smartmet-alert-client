@@ -166,7 +166,7 @@
   "toContent": "Go to text-formatted warnings",
   "warningsInAreaStart": "Warnings in",
   "warningsInAreaEnd": "areas.",
-  "toNextContent": "Go to next paragraph.",
+  "toNextContent": "Go to next section.",
   "infoButtonAriaLabelShowRegion": "Show current warnings for",
   "infoButtonAriaLabelCloseRegion": "Close current warnings for",
   "infoButtonAriaLabelValidWarnings": ".",
