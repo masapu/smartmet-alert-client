@@ -209,15 +209,17 @@ div.symbol-list-text {
   &.flag-unselected {
     text-align: left;
     padding-left: 22px;
+    color: #303193;
+    font-weight: bold;
   }
 }
 
 .light-theme .flag-selected {
-  background-image: url($ui-image-path + 'toggle-selected-green' + $image-extension);
+  background-image: url($ui-image-path + 'toggle-selected-blue' + $image-extension);
 }
 
 .dark-theme .flag-selected {
-  background-image: url($ui-image-path + 'toggle-selected-green' + $image-extension);
+  background-image: url($ui-image-path + 'toggle-selected-blue' + $image-extension);
 }
 
 .light-gray-theme .flag-selected {
@@ -229,11 +231,11 @@ div.symbol-list-text {
 }
 
 .light-theme .flag-unselected {
-  background-image: url($ui-image-path + 'toggle-unselected-red' + $image-extension);
+  background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
 }
 
 .dark-theme .flag-unselected {
-  background-image: url($ui-image-path + 'toggle-unselected-red' + $image-extension);
+  background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
 }
 
 .light-gray-theme .flag-unselected {
