@@ -8,7 +8,9 @@
       `symbol-rotate-${rotation}`,
       `level-${input.severity}`,
       `${typeClass}`,
-    ]">
+    ]"
+    :aria-label="`${warningLevel} ${warningTypeText}${warningDetails}`"
+  >
     <span
       aria-hidden="true"
       :class="[
@@ -23,12 +25,35 @@
 
 <script>
 import fields from '../mixins/fields'
+import i18n from '../mixins/i18n'
 import utils from '../mixins/utils'
 
 export default {
   name: 'RegionWarning',
-  mixins: [fields, utils],
-  props: ['input'],
+  mixins: [fields, i18n, utils],
+  props: {
+    input: {
+      type: Object,
+      default: null,
+    },
+    language: {
+      type: String,
+    },
+  },
+  computed: {
+    warningLevel() {
+      return this.t(`warningLevel${this.input.severity}`)
+    },
+    warningTypeText() {
+      return this.t(this.input.type).toLowerCase();
+    },
+    warningDetails() {
+      if (this.input.text == null || this.input.direction == null) {
+        return ''
+      }
+      return ` (${this.input.text} m/s ${this.t("fromDirection")} ${this.input.direction + 180}°)`
+    }
+  },
 }
 </script>
 

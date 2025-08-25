@@ -6,7 +6,9 @@
           <RegionWarning
             v-for="warning in warningsSummary"
             :key="warning.key"
-            :input="warning"></RegionWarning>
+            :input="warning"
+            :language="language">
+          </RegionWarning>
         </div>
         <span class="region-item-text">
           {{ regionName }}

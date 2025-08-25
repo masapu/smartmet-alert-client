@@ -2,7 +2,9 @@
   <div class="symbol-list-table" :class="theme">
     <div class="symbol-list-cell symbol-list-cell-image">
       <div
-        :class="`level-${severity} ${typeClass} symbol-list-image-column symbol-list-image warning-image`"></div>
+        :class="`level-${severity} ${typeClass} symbol-list-image-column symbol-list-image warning-image`"
+        :aria-label="`${warningLevelText} ${title.toLowerCase()}`">
+      </div>
     </div>
     <div class="symbol-list-cell symbol-list-cell-text">
       <div class="symbol-list-text-select">
@@ -50,6 +52,9 @@ export default {
     },
     title() {
       return this.t(this.input.type)
+    },
+    warningLevelText() {
+      return this.t(`warningLevel${this.severity}`)
     },
   },
   methods: {

@@ -165,6 +165,7 @@
   "mapAriaLabel": "Magnifiable map",
   "toContent": "Go to text-formatted warnings",
   "warningsInAreasStart": "Warnings",
+  "fromDirection": "from",
   "in1Areas": "in one area",
   "in2Areas": "in two areas",
   "in3Areas": "in three areas",
