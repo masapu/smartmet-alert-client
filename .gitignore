@@ -152,3 +152,5 @@ stats.html
 # Aider
 .aider.*
 
+# Build
+dist
