@@ -214,7 +214,6 @@ div.symbol-list-text {
   &.flag-unselected {
     text-align: left;
     padding-left: 22px;
-    color: #303193;
     font-weight: bold;
   }
 }
@@ -236,10 +235,12 @@ div.symbol-list-text {
 }
 
 .light-theme .flag-unselected {
+  color: $dark-blue;
   background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
 }
 
 .dark-theme .flag-unselected {
+  color: $dark-blue;
   background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
 }
 

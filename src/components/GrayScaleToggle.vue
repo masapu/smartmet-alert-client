@@ -122,40 +122,41 @@ div#gray-scale-select {
   &.gray-scale-unselected {
     text-align: left;
     padding-left: 22px;
-    color: #303193;
     font-weight: bold;
   }
 }
 
-.light-theme .gray-scale-selected {
+.light-theme div#gray-scale-select.gray-scale-selected {
   background-image: url($ui-image-path + 'toggle-selected-blue' + $image-extension);
 }
 
-.dark-theme .gray-scale-selected {
+.dark-theme div#gray-scale-select.gray-scale-selected {
   background-image: url($ui-image-path + 'toggle-selected-blue' + $image-extension);
 }
 
-.light-gray-theme .gray-scale-selected {
+.light-gray-theme div#gray-scale-select.gray-scale-selected {
   background-image: url($ui-image-path + 'toggle-selected-gray' + $image-extension);
 }
 
-.dark-gray-theme .gray-scale-selected {
+.dark-gray-theme div#gray-scale-select.gray-scale-selected {
   background-image: url($ui-image-path + 'toggle-selected-gray' + $image-extension);
 }
 
-.light-theme .gray-scale-unselected {
+.light-theme div#gray-scale-select.gray-scale-unselected {
+  color: $dark-blue;
   background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
 }
 
-.dark-theme .gray-scale-unselected {
+.dark-theme div#gray-scale-select.gray-scale-unselected {
+  color: $dark-blue;
   background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
 }
 
-.light-gray-theme .gray-scale-unselected {
+.light-gray-theme div#gray-scale-select.gray-scale-unselected {
   background-image: url($ui-image-path + 'toggle-unselected-gray' + $image-extension);
 }
 
-.dark-gray-theme .gray-scale-unselected {
+.dark-gray-theme div#gray-scale-select.gray-scale-unselected {
   background-image: url($ui-image-path + 'toggle-unselected-dark' + $image-extension);
 }
 
