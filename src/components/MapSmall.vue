@@ -98,7 +98,7 @@
           class="border-path"
           :key="path.key"
           :stroke="strokeColor"
-          :stroke-width="path.strokeWidth"
+          :stroke-width="1.5*path.strokeWidth"
           :d="path.d"
           fill-opacity="0" />
         <path

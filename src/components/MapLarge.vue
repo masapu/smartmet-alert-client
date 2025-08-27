@@ -140,7 +140,7 @@
           class="border-path"
           :key="path.key"
           :stroke="strokeColor"
-          :stroke-width="path.strokeWidth"
+          :stroke-width="2*path.strokeWidth"
           :stroke-opacity="strokeOpacity"
           :d="path.d"
           fill-opacity="0"
