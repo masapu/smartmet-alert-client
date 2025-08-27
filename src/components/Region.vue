@@ -1,46 +1,49 @@
 <template>
-  <b-card no-body class="mb-1 current-warning-panel" :class="theme">
-    <b-card-header header-tag="header" class="p-1">
+  <h3>
+    <button
+      type="button"
+      :aria-expanded="open"
+      :class="['accordion-trigger', 'focus-ring', open ? '' : 'collapsed']"
+      :aria-controls="`accordion-section-${code}`"
+      :id="`accordion-${code}`"
+      :aria-label="ariaButton"
+      @click="onRegionToggle">
       <div class="region-header">
-        <div>
-          <RegionWarning
-            v-for="warning in warningsSummary"
-            :key="warning.key"
-            :input="warning"
-            :language="language">
-          </RegionWarning>
-        </div>
+        <RegionWarning
+          v-for="warning in warningsSummary"
+          :key="warning.key"
+          :input="warning"
+          :language="language">
+        </RegionWarning>
         <span class="region-item-text">
           {{ regionName }}
         </span>
       </div>
-      <b-button
+      <div
         block
-        :class="['current-warning-toggle', visible ? '' : 'collapsed']"
-        :aria-label="ariaButton"
-        @click="onRegionToggle" />
-    </b-card-header>
-    <b-collapse
-      :id="identifier"
-      v-model="visible"
-      class="accordion-item-region focus-ring"
-      :accordion="`accordion-${type}`"
-      tabindex="0"
-      :aria-label="ariaInfo">
-      <b-card-body body-class="p-0">
-        <div class="current-description">
-          <div class="current-description-table">
-            <DescriptionWarning
-              v-for="warning in reducedWarnings"
-              :key="warning.identification"
-              :input="warning"
-              :theme="theme"
-              :language="language" />
-          </div>
-        </div>
-      </b-card-body>
-    </b-collapse>
-  </b-card>
+        :class="['current-warning-toggle', open ? '' : 'collapsed']" />
+    </button>
+  </h3>
+  <div
+    :id="`accordion-section-${code}`"
+    role="region"
+    :aria-labelledby="`accordion-${code}`"
+    :aria-expanded="open"
+    class="accordion-panel"
+    :hidden="open ? null : ''"
+  >
+    <div class="current-description">
+      <div class="current-description-table">
+        <DescriptionWarning
+          v-for="warning in reducedWarnings"
+            :key="warning.identification"
+            :input="warning"
+            :theme="theme"
+            :language="language"
+        />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -56,10 +59,6 @@ export default {
   props: {
     type: {
       type: String,
-    },
-    shown: {
-      type: Boolean,
-      default: false,
     },
     code: {
       type: String,
@@ -85,7 +84,7 @@ export default {
   },
   data() {
     return {
-      visible: this.shown,
+      open: false,
     }
   },
   computed: {
@@ -133,7 +132,7 @@ export default {
     },
     ariaButton() {
       return `${
-        this.visible
+        this.open
           ? this.t('infoButtonAriaLabelCloseRegion')
           : this.t('infoButtonAriaLabelShowRegion')
       } ${this.regionName} ${this.t('infoButtonAriaLabelValidWarnings')}`
@@ -147,17 +146,9 @@ export default {
       )
     },
   },
-  watch: {
-    shown(isShown) {
-      this.visible = isShown
-    },
-  },
   methods: {
     onRegionToggle() {
-      this.$emit('regionToggled', {
-        code: this.code,
-        shown: !this.visible,
-      })
+      this.open = !this.open
     },
   },
 }
@@ -334,5 +325,111 @@ div.accordion-item-region {
   div.card-body {
     padding: 0;
   }
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-trigger {
+  background: none;
+  color: hsl(0deg 0% 13%);
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  outline: none;
+}
+
+.accordion-trigger:focus,
+.accordion-trigger:hover {
+  background: hsl(216deg 94% 94%);
+}
+
+.accordion-trigger:focus {
+  outline: 4px solid transparent;
+}
+
+.accordion > *:first-child .accordion-trigger > .region-header {
+  border-radius: 5px 0 0 0;
+}
+
+.accordion > *:last-child .accordion-trigger.collapsed > .region-header {
+  border-radius: 0 0 0 5px;
+}
+
+.accordion > *:first-child:last-child .accordion-trigger > .region-header {
+  border-radius: 5px 0 0 0;
+}
+
+.accordion > *:first-child:last-child .accordion-trigger.collapsed > .region-header {
+  border-radius: 5px 0 0 5px;
+}
+
+.accordion > *:first-child > h3 > button,
+.accordion > *:first-child > h3 > button:hover {
+  border-radius: 5px 5px 0 0;
+}
+
+.accordion > *:last-child > h3 > button.collapsed,
+.accordion > *:last-child > h3 > button.collapsed:hover {
+  border-radius: 0 0 5px 5px;
+}
+
+.accordion > *:first-child:last-child > h3 > button,
+.accordion > *:first-child:last-child > h3 > button:hover {
+  border-radius: 5px 5px 0 0;
+}
+
+.accordion > *:first-child:last-child > h3 > button.collapsed,
+.accordion > *:first-child:last-child > h3 > button.collapsed:hover {
+  border-radius: 5px;
+}
+
+.accordion > *:last-child .current-description {
+  border-radius: 0 0 5px 5px;
+}
+
+.accordion > *:first-child div.current-warning-toggle {
+  border-radius: 0 5px 0 0;
+}
+
+.accordion > *:last-child div.current-warning-toggle.collapsed {
+  border-radius: 0 0 5px 0;
+}
+
+.accordion > *:first-child:last-child div.current-warning-toggle {
+  border-radius: 0 5px 0 0;
+}
+
+.accordion > *:first-child:last-child div.current-warning-toggle.collapsed {
+  border-radius: 0 5px 5px 0;
+}
+
+button {
+  border-style: none;
+}
+
+.accordion button::-moz-focus-inner {
+  border: 0;
+}
+
+.accordion-trigger:focus .accordion-title {
+  border-color: hsl(216deg 94% 43%);
+}
+
+.accordion-panel {
+  margin: 0;
+  padding: 0;
+}
+
+/* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
+.accordion-panel[hidden] {
+  display: none;
 }
 </style>
