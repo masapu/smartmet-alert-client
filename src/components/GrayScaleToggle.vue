@@ -94,6 +94,8 @@ div#gray-scale-select-text {
   padding-right: 5px;
   vertical-align: middle;
   line-height: normal;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 div#gray-scale-select-container {
