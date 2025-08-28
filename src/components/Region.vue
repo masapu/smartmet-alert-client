@@ -190,6 +190,9 @@ export default {
 
 button {
   border: none;
+  &:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
 }
 
 .region-header {
@@ -346,15 +349,6 @@ h3 {
   outline: none;
 }
 
-.accordion-trigger:focus,
-.accordion-trigger:hover {
-  background: hsl(216deg 94% 94%);
-}
-
-.accordion-trigger:focus {
-  outline: 4px solid transparent;
-}
-
 .accordion > *:first-child .accordion-trigger > .region-header {
   border-radius: 5px 0 0 0;
 }
@@ -417,10 +411,6 @@ button {
 
 .accordion button::-moz-focus-inner {
   border: 0;
-}
-
-.accordion-trigger:focus .accordion-title {
-  border-color: hsl(216deg 94% 43%);
 }
 
 .accordion-panel {
