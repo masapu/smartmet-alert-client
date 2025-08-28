@@ -1,34 +1,41 @@
 <template>
-  <div class="map-container">
-    <div class="warning-map-status" aria-hidden="true">
-      <p>
-        <span class="bold-text">{{ warningsTitle }}</span
-        ><br />
-        <span v-html="warningsDate"></span>
-      </p>
-      <p>
-        <span class="bold-text">{{ updatedTitle }}</span
-        ><br />
-        {{ updatedDate }}<br />
-        {{ atTime }} {{ updatedTime }}
-      </p>
+  <div>
+    <div class="map-container">
+      <div class="warning-map-status" aria-hidden="true">
+        <p>
+          <span class="bold-text">{{ warningsTitle }}</span
+          ><br />
+          <span v-html="warningsDate"></span>
+        </p>
+        <p>
+          <span class="bold-text">{{ updatedTitle }}</span
+          ><br />
+          {{ updatedDate }}<br />
+          {{ atTime }} {{ updatedTime }}
+        </p>
+      </div>
+      <div class="data-providers noselect d-none d-sm-block" aria-hidden="true">
+        <span>{{ dataProviderFirst }}</span>
+        <br />
+        <span>{{ dataProviderSecond }}</span>
+      </div>
+      <MapLarge
+        :index="index"
+        :input="regions"
+        :visible-warnings="visibleWarnings"
+        :warnings="warnings"
+        :geometry-id="geometryId"
+        :loading="loading"
+        :theme="theme"
+        :language="language"
+        :spinner-enabled="spinnerEnabled"
+        @loaded="onLoaded" />
     </div>
-    <div class="data-providers noselect" aria-hidden="true">
-      <span>{{ dataProviderFirst }}</span
-      ><br />
+    <div class="data-providers-narrow noselect d-sm-none" aria-hidden="true">
+      <span>{{ dataProviderFirst }}</span>
+      <br />
       <span>{{ dataProviderSecond }}</span>
     </div>
-    <MapLarge
-      :index="index"
-      :input="regions"
-      :visible-warnings="visibleWarnings"
-      :warnings="warnings"
-      :geometry-id="geometryId"
-      :loading="loading"
-      :theme="theme"
-      :language="language"
-      :spinner-enabled="spinnerEnabled"
-      @loaded="onLoaded" />
   </div>
 </template>
 
@@ -193,6 +200,13 @@ div.data-providers {
   text-align: left;
   z-index: 5;
   pointer-events: none;
+}
+
+div.data-providers-narrow {
+  width: 100%;
+  text-align: right;
+  pointer-events: none;
+  background: transparent;
 }
 
 @media screen and (orientation: landscape) {
