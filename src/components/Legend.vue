@@ -168,9 +168,9 @@ div.symbol-list-header-row {
 }
 
 .legends-panel {
-  border-radius: 0;
   margin-left: 0;
   margin-right: 0;
+  border-radius: 5px;
 }
 
 .light-theme .legends-panel {
@@ -195,6 +195,7 @@ div.symbol-list-header-row {
   line-height: $current-warning-height;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 5px !important;
 }
 
 .light-theme .legends-heading {
@@ -217,6 +218,7 @@ div.symbol-list-header-row {
   position: absolute;
   left: 0;
   right: 38px;
+  border-radius: 5px 0 0 5px;
 }
 
 .light-theme .legends-header {
@@ -269,7 +271,7 @@ div.symbol-list-header-row {
   background-image: url($ui-image-path + 'arrow-up.svg');
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 0;
+  border-radius: 0 3px 0 0;
   border-style: none;
   float: right;
   padding: $image-padding;
@@ -277,6 +279,7 @@ div.symbol-list-header-row {
 
   &.collapsed {
     background-image: url($ui-image-path + 'arrow-down.svg');
+    border-radius: 0 3px 3px 0;
   }
 }
 
@@ -346,6 +349,7 @@ div.symbol-list-header-row {
 
 .legends-container {
   padding: 15px;
+  border-radius: 0 0 5px 5px;
 }
 
 .light-theme .legends-container {
