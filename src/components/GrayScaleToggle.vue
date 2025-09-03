@@ -16,7 +16,9 @@
         @click="toggleGrayScale"
         @keydown.enter="toggleGrayScale"
         @keydown.space="toggleGrayScale">
+            <span>
             {{ grayScale ? 'ON' : 'OFF' }}
+            </span>
         </div>
     </div>
   </div>
@@ -106,25 +108,29 @@ div#gray-scale-select-container {
 }
 
 div#gray-scale-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: $symbol-list-select-height;
-  line-height: $symbol-list-select-height;
   margin: 0;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  font-family: "Noto Sans", sans-serif;
-  color: $white;
-  font-size: 1rem;
-  forced-color-adjust: none;
   &.gray-scale-selected {
-    text-align: right;
-    padding-right: 22px;
+    padding-right: 18px;
   }
   &.gray-scale-unselected {
-    text-align: left;
-    padding-left: 22px;
-    font-weight: bold;
+    padding-left: 18px;
+    > span {
+      font-weight: bold;
+    }
+  }
+  span {
+    font-family: "Noto Sans", sans-serif;
+    color: $white;
+    font-size: 1rem;
+    forced-color-adjust: none;
   }
 }
 
@@ -145,13 +151,17 @@ div#gray-scale-select {
 }
 
 .light-theme div#gray-scale-select.gray-scale-unselected {
-  color: $dark-blue;
   background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
+  > span {
+    color: $dark-blue;
+  }
 }
 
 .dark-theme div#gray-scale-select.gray-scale-unselected {
-  color: $dark-blue;
   background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
+  > span {
+    color: $dark-blue;
+  }
 }
 
 .light-gray-theme div#gray-scale-select.gray-scale-unselected {
