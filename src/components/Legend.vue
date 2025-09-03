@@ -219,6 +219,10 @@ div.symbol-list-header-row {
   left: 0;
   right: 38px;
   border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: $current-warning-height;
 }
 
 .light-theme .legends-header {
@@ -240,7 +244,6 @@ div.symbol-list-header-row {
 .legends-text {
   display: block;
   text-align: left;
-  line-height: $current-warning-height;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
