@@ -217,6 +217,7 @@ div.show-text-row {
 }
 
 div#fmi-warnings-view > div.row > button.show-text {
+  height: 30px;
   line-height: 30px;
   float: right;
   cursor: pointer;
