@@ -28,7 +28,9 @@
             @click="toggle"
             @keydown.enter="toggle"
             @keydown.space="toggle">
+              <span>
                 {{ input.visible ? 'ON' : 'OFF' }}
+              </span>
             </div>
         </div>
       </div>
@@ -194,27 +196,28 @@ div.symbol-list-text {
 }
 
 .symbol-list-select {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: $symbol-list-select-height;
-  line-height: $symbol-list-select-height;
   margin: 0;
   background-repeat: no-repeat;
   background-position: center;
-  &.flag-selected, &.flag-unselected{
-    cursor: pointer;
-    font-family: $symbol-font-family;
+  &.flag-selected {
+    padding-right: 18px;
+  }
+  &.flag-unselected {
+    padding-left: 18px;
+    > span {
+      font-weight: bold;
+    }
+  }
+  span {
+    font-family: "Noto Sans", sans-serif;
     color: $white;
     font-size: $font-size;
     forced-color-adjust: none;
-  }
-  &.flag-selected {
-    text-align: right;
-    padding-right: 22px;
-  }
-  &.flag-unselected {
-    text-align: left;
-    padding-left: 22px;
-    font-weight: bold;
   }
 }
 
@@ -235,13 +238,17 @@ div.symbol-list-text {
 }
 
 .light-theme .flag-unselected {
-  color: $dark-blue;
   background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
+  > span {
+    color: $dark-blue;
+  }
 }
 
 .dark-theme .flag-unselected {
-  color: $dark-blue;
   background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
+  > span {
+    color: $dark-blue;
+  }
 }
 
 .light-gray-theme .flag-unselected {
