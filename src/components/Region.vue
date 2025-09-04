@@ -339,7 +339,7 @@ h3 {
   background: none;
   color: hsl(0deg 0% 13%);
   display: block;
-  font-size: 1rem;
+  font-size: $font-size;
   font-weight: normal;
   margin: 0;
   padding: 0;

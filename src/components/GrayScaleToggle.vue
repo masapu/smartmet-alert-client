@@ -127,9 +127,9 @@ div#gray-scale-select {
     }
   }
   span {
-    font-family: "Noto Sans", sans-serif;
+    font-family: $symbol-font-family;
     color: $white;
-    font-size: 1rem;
+    font-size: $font-size;
     forced-color-adjust: none;
   }
 }
