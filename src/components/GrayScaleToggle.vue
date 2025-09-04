@@ -122,9 +122,6 @@ div#gray-scale-select {
   }
   &.gray-scale-unselected {
     padding-left: 18px;
-    > span {
-      font-weight: bold;
-    }
   }
   span {
     font-family: $symbol-font-family;

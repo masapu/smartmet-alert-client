@@ -209,9 +209,6 @@ div.symbol-list-text {
   }
   &.flag-unselected {
     padding-left: 18px;
-    > span {
-      font-weight: bold;
-    }
   }
   span {
     font-family: "Noto Sans", sans-serif;
