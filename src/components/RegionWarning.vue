@@ -72,15 +72,11 @@ div.warning-image {
 }
 
 .current-warning-image {
-  background-size: 28px 28px;
+  background-size: $current-warning-image-height $current-warning-image-height;
   height: $current-warning-image-height;
   width: $current-warning-image-height;
-  margin-top: calc(
-    ($current-warning-height - $current-warning-image-height) / 2
-  );
+  margin: 0 5px;
   float: right;
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 span.warning-symbol-text {

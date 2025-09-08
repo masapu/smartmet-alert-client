@@ -9,15 +9,17 @@
       :aria-label="ariaButton"
       @click="onRegionToggle">
       <div class="region-header">
-        <RegionWarning
-          v-for="warning in warningsSummary"
-          :key="warning.key"
-          :input="warning"
-          :language="language">
-        </RegionWarning>
         <span class="region-item-text">
           {{ regionName }}
         </span>
+        <div>
+          <RegionWarning
+            v-for="warning in warningsSummary"
+            :key="warning.key"
+            :input="warning"
+            :language="language">
+          </RegionWarning>
+        </div>
       </div>
       <div
         block
@@ -199,12 +201,15 @@ button {
   position: absolute;
   left: 0;
   right: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $current-warning-height;
 }
 
 .region-item-text {
   display: block;
   text-align: left;
-  line-height: $current-warning-height;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
