@@ -185,6 +185,7 @@ div.symbol-list-text {
   height: $symbol-list-line-height;
   max-width: 141px;
   padding-right: 5px;
+  word-break: break-word;
   hyphens: auto;
 }
 

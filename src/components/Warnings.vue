@@ -355,6 +355,8 @@ div#fmi-warnings-view {
 div.symbol-list-text {
   display: table-cell;
   height: $symbol-list-line-height;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 hr {
