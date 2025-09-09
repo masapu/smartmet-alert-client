@@ -191,7 +191,7 @@ span.symbol-text {
   font-weight: 700;
 }
 
-@media (max-width: 575px) {
+@media (width < 576px) {
   .symbol-text {
     display: none;
   }

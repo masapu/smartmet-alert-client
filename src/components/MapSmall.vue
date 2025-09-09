@@ -308,7 +308,7 @@ div.map-small {
   }
 }
 
-@media (max-width: 575px) {
+@media (width < 576px) {
   #fmi-day-small-view .map-small,
   #fmi-day-small-view .map-container {
     display: none;

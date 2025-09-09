@@ -1570,7 +1570,7 @@ svg#finland-large {
   }
 }
 
-@media (max-width: 575px) {
+@media (width < 576px) {
   button.fmi-warnings-map-tool {
     display: none;
   }
