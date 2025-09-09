@@ -14,11 +14,6 @@
           {{ atTime }} {{ updatedTime }}
         </p>
       </div>
-      <div class="data-providers noselect d-none d-sm-block" aria-hidden="true">
-        <span>{{ dataProviderFirst }}</span>
-        <br />
-        <span>{{ dataProviderSecond }}</span>
-      </div>
       <MapLarge
         :index="index"
         :input="regions"
@@ -31,7 +26,7 @@
         :spinner-enabled="spinnerEnabled"
         @loaded="onLoaded" />
     </div>
-    <div class="data-providers-narrow noselect d-sm-none" aria-hidden="true">
+    <div class="data-providers noselect" aria-hidden="true">
       <span>{{ dataProviderFirst }}</span>
       <br />
       <span>{{ dataProviderSecond }}</span>
@@ -194,19 +189,12 @@ div.warning-map-status {
 }
 
 div.data-providers {
-  position: absolute;
-  bottom: 4px;
-  right: 16px;
-  text-align: left;
+  text-align: right;
   z-index: 5;
   pointer-events: none;
-}
-
-div.data-providers-narrow {
-  width: 100%;
-  text-align: right;
-  pointer-events: none;
-  background: transparent;
+  padding-left: 50%;
+  margin-top: -50px;
+  margin-right: 15px;
 }
 
 @media screen and (orientation: landscape) {
