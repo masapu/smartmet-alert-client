@@ -256,6 +256,9 @@ export default {
       }-theme`
     },
     fetchWarnings() {
+      if (this.warnings) {
+        return
+      }
       this.loading = 1
       if (this.debugMode.toLowerCase() !== 'false') {
         console.log(`Updating warnings at ${new Date()}`)
