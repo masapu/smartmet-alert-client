@@ -196,7 +196,7 @@ div.symbol-list-text {
   vertical-align: middle;
 }
 
-.symbol-list-select {
+.symbol-list-select.d-md-block {
   display: flex !important;
   align-items: center;
   justify-content: center;
