@@ -546,8 +546,9 @@ export default {
           if (!this.coverageWarnings.includes(key)) {
             ;[...this.warnings[key].covRegions.keys()].forEach((covRegion) => {
               if (
-                this.coverageRegions[covRegion] == null ||
-                this.coverageRegions[covRegion] < this.warnings[key].severity
+                (this.coverageRegions[covRegion] == null ||
+                this.coverageRegions[covRegion] < this.warnings[key].severity) &&
+                this.warnings[key].covRegions.get(covRegion) >= this.coverageCriterion
               ) {
                 this.coverageRegions[covRegion] = this.warnings[key].severity
               }
