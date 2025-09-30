@@ -401,7 +401,8 @@ export default {
           const keys = []
           const geoms = []
           region.warnings
-            .filter((warning) => this.visibleWarnings.includes(warning.type))
+            .filter((warning) => this.visibleWarnings.includes(warning.type) &&
+              warning.coverage === 100 )
             .forEach((regionWarning, index, regionWarnings) => {
               const identifier = regionWarning.identifiers.find(
                 (id) => warnings[id] && warnings[id].covRegions.size === 0

@@ -479,7 +479,7 @@ export default {
                     if (covRegions.has(regionId)) {
                       warningItem.coverage += covRegions.get(regionId)
                     } else {
-                      warningItem.coverage = 1
+                      warningItem.coverage = 100
                     }
                   }
                 })
