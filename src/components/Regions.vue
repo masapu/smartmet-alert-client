@@ -203,7 +203,7 @@ div.region-type-container {
 div.accordion {
   margin: 0;
   border: 2px solid $variant-gray-darker;
-  border-radius: 7px;
+  border-radius: 0;
   > * + * {
     border-top: 1px solid $variant-gray-darker;
   }

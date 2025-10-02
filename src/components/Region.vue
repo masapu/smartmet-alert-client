@@ -354,60 +354,60 @@ h3 {
   outline: none;
 }
 
-.accordion > *:first-child .accordion-trigger > .region-header {
-  border-radius: 5px 0 0 0;
+.accordion > div:first-child .accordion-trigger > .region-header {
+  border-radius: 0;
 }
 
-.accordion > *:last-child .accordion-trigger.collapsed > .region-header {
-  border-radius: 0 0 0 5px;
+.accordion > div:last-child .accordion-trigger.collapsed > .region-header {
+  border-radius: 0;
 }
 
-.accordion > *:first-child:last-child .accordion-trigger > .region-header {
-  border-radius: 5px 0 0 0;
+.accordion > div:first-child:last-child .accordion-trigger > .region-header {
+  border-radius: 0;
 }
 
-.accordion > *:first-child:last-child .accordion-trigger.collapsed > .region-header {
-  border-radius: 5px 0 0 5px;
+.accordion > div:first-child:last-child .accordion-trigger.collapsed > .region-header {
+  border-radius: 0;
 }
 
-.accordion > *:first-child > h3 > button,
-.accordion > *:first-child > h3 > button:hover {
-  border-radius: 5px 5px 0 0;
+.accordion > div:first-child > h3 > button,
+.accordion > div:first-child > h3 > button:hover {
+  border-radius: 0;
 }
 
-.accordion > *:last-child > h3 > button.collapsed,
-.accordion > *:last-child > h3 > button.collapsed:hover {
-  border-radius: 0 0 5px 5px;
+.accordion > div:last-child > h3 > button.collapsed,
+.accordion > div:last-child > h3 > button.collapsed:hover {
+  border-radius: 0;
 }
 
-.accordion > *:first-child:last-child > h3 > button,
-.accordion > *:first-child:last-child > h3 > button:hover {
-  border-radius: 5px 5px 0 0;
+.accordion > div:first-child:last-child > h3 > button,
+.accordion > div:first-child:last-child > h3 > button:hover {
+  border-radius: 0;
 }
 
-.accordion > *:first-child:last-child > h3 > button.collapsed,
-.accordion > *:first-child:last-child > h3 > button.collapsed:hover {
-  border-radius: 5px;
+.accordion > div:first-child:last-child > h3 > button.collapsed,
+.accordion > div:first-child:last-child > h3 > button.collapsed:hover {
+  border-radius: 0;
 }
 
-.accordion > *:last-child .current-description {
-  border-radius: 0 0 5px 5px;
+.accordion > div:last-child .current-description {
+  border-radius: 0;
 }
 
-.accordion > *:first-child div.current-warning-toggle {
-  border-radius: 0 5px 0 0;
+.accordion > div:first-child > div > h3 > button > div.current-warning-toggle {
+  border-radius: 0;
 }
 
-.accordion > *:last-child div.current-warning-toggle.collapsed {
-  border-radius: 0 0 5px 0;
+.accordion > div:last-child > div > h3 > button > div.current-warning-toggle.collapsed {
+  border-radius: 0;
 }
 
-.accordion > *:first-child:last-child div.current-warning-toggle {
-  border-radius: 0 5px 0 0;
+.accordion > div:first-child:last-child > div > h3 > button > div.current-warning-toggle {
+  border-radius: 0;
 }
 
-.accordion > *:first-child:last-child div.current-warning-toggle.collapsed {
-  border-radius: 0 5px 5px 0;
+.accordion > div:first-child:last-child > div > h3 > button > div.current-warning-toggle.collapsed {
+  border-radius: 0;
 }
 
 button {
