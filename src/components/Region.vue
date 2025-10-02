@@ -304,22 +304,22 @@ button {
 }
 
 .light-theme .current-description {
-  border-top: 1px solid $light-description-border-color;
+  border-top: 0.5px solid $light-description-border-color;
   background-color: $light-description-background-color;
 }
 
 .dark-theme .current-description {
-  border-top: 1px solid $dark-description-border-color;
+  border-top: 0.5px solid $dark-description-border-color;
   background-color: $dark-description-background-color;
 }
 
 .light-gray-theme .current-description {
-  border-top: 1px solid $light-gray-description-border-color;
+  border-top: 0.5px solid $light-gray-description-border-color;
   background-color: $light-gray-description-background-color;
 }
 
 .dark-gray-theme .current-description {
-  border-top: 1px solid $dark-gray-description-border-color;
+  border-top: 0.5px solid $dark-gray-description-border-color;
   background-color: $dark-gray-description-background-color;
 }
 

@@ -174,19 +174,19 @@ div.symbol-list-header-row {
 }
 
 .light-theme .legends-panel {
-  border: 2px solid $light-legend-background-color;
+  border: 0.5px solid $light-legend-background-color;
 }
 
 .dark-theme .legends-panel {
-  border: 2px solid $dark-legend-background-color;
+  border: 0.5px solid $dark-legend-background-color;
 }
 
 .light-gray-theme .legends-panel {
-  border: 2px solid $light-gray-legend-background-color;
+  border: 0.5px solid $light-gray-legend-background-color;
 }
 
 .dark-gray-theme .legends-panel {
-  border: 2px solid $dark-gray-legend-background-color;
+  border: 0.5px solid $dark-gray-legend-background-color;
 }
 
 .legends-heading {
@@ -194,7 +194,7 @@ div.symbol-list-header-row {
   padding: 0 0 0 15px !important;
   line-height: $current-warning-height;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.125);
   border-radius: 0 !important;
 }
 
@@ -357,22 +357,22 @@ button.legends-toggle {
 
 .light-theme .legends-container {
   background-color: $light-legend-container-background-color;
-  border-top: 2px solid $light-legend-background-color;
+  border-top: 0.5px solid $light-legend-background-color;
 }
 
 .dark-theme .legends-container {
   background-color: $dark-legend-container-background-color;
-  border-top: 2px solid $dark-legend-background-color;
+  border-top: 0.5px solid $dark-legend-background-color;
 }
 
 .light-gray-theme .legends-container {
   background-color: $light-gray-legend-container-background-color;
-  border-top: 2px solid $light-gray-legend-background-color;
+  border-top: 0.5px solid $light-gray-legend-background-color;
 }
 
 .dark-gray-theme .legends-container {
   background-color: $dark-gray-legend-container-background-color;
-  border-top: 2px solid $dark-gray-legend-background-color;
+  border-top: 0.5px solid $dark-gray-legend-background-color;
 }
 
 div#legends-collapse div.card-body {
