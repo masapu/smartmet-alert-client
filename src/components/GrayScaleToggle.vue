@@ -16,9 +16,9 @@
         @click="toggleGrayScale"
         @keydown.enter="toggleGrayScale"
         @keydown.space="toggleGrayScale">
-            <span>
-            {{ grayScale ? 'ON' : 'OFF' }}
-            </span>
+          <span>
+            {{ toggleText }}
+          </span>
         </div>
     </div>
   </div>
@@ -54,6 +54,9 @@ export default {
     },
     grayScaleText() {
       return this.t('grayScale')
+    },
+    toggleText() {
+      return this.grayScale ? this.t('toggleOn') : this.t('toggleOff')
     },
   },
   methods: {
@@ -119,54 +122,23 @@ div#gray-scale-select {
   cursor: pointer;
   &.gray-scale-selected {
     padding-right: 18px;
+    background-image: url($ui-image-path + 'toggle-selected' + $image-extension);
+    span {
+      color: $toggle-on-text;
+    }
   }
   &.gray-scale-unselected {
     padding-left: 18px;
+    background-image: url($ui-image-path + 'toggle-unselected' + $image-extension);
+    span {
+      color: $toggle-off-text;
+    }
   }
   span {
     font-family: $symbol-font-family;
-    color: $white;
     font-size: $font-size;
     forced-color-adjust: none;
   }
-}
-
-.light-theme div#gray-scale-select.gray-scale-selected {
-  background-image: url($ui-image-path + 'toggle-selected-blue' + $image-extension);
-}
-
-.dark-theme div#gray-scale-select.gray-scale-selected {
-  background-image: url($ui-image-path + 'toggle-selected-blue' + $image-extension);
-}
-
-.light-gray-theme div#gray-scale-select.gray-scale-selected {
-  background-image: url($ui-image-path + 'toggle-selected-gray' + $image-extension);
-}
-
-.dark-gray-theme div#gray-scale-select.gray-scale-selected {
-  background-image: url($ui-image-path + 'toggle-selected-gray' + $image-extension);
-}
-
-.light-theme div#gray-scale-select.gray-scale-unselected {
-  background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
-  > span {
-    color: $dark-blue;
-  }
-}
-
-.dark-theme div#gray-scale-select.gray-scale-unselected {
-  background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
-  > span {
-    color: $dark-blue;
-  }
-}
-
-.light-gray-theme div#gray-scale-select.gray-scale-unselected {
-  background-image: url($ui-image-path + 'toggle-unselected-gray' + $image-extension);
-}
-
-.dark-gray-theme div#gray-scale-select.gray-scale-unselected {
-  background-image: url($ui-image-path + 'toggle-unselected-dark' + $image-extension);
 }
 
 @media (max-width: 767px) {

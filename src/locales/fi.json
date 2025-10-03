@@ -191,5 +191,7 @@
   "warningsInEffect": "Varoituksia voimassa",
   "landAreas": "maa-alueella ja",
   "seaAreas": "merialueella",
-  "grayScale": "Harmaasävyt"
+  "grayScale": "Harmaasävyt",
+  "toggleOn": "On",
+  "toggleOff": "Off"
 }

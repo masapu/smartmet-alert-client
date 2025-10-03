@@ -191,5 +191,7 @@
   "warningsInEffect": "warnings in effect in",
   "landAreas": "land areas and",
   "seaAreas": "sea areas",
-  "grayScale": "Gray scale"
+  "grayScale": "Gray scale",
+  "toggleOn": "On",
+  "toggleOff": "Off"
 }

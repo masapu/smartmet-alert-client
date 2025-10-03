@@ -29,7 +29,7 @@
             @keydown.enter="toggle"
             @keydown.space="toggle">
               <span>
-                {{ input.visible ? 'ON' : 'OFF' }}
+                {{ toggleText }}
               </span>
             </div>
         </div>
@@ -57,6 +57,9 @@ export default {
     },
     warningLevelText() {
       return this.t(`warningLevel${this.severity}`)
+    },
+    toggleText() {
+      return this.input.visible ? this.t('toggleOn') : this.t('toggleOff')
     },
   },
   methods: {
@@ -163,7 +166,6 @@ hr {
 
 div#fmi-warnings-list div.symbol-list-cell-text {
   padding-right: 0;
-
   hr {
     margin-right: 0;
   }
@@ -207,61 +209,29 @@ div.symbol-list-text {
   background-position: center;
   &.flag-selected {
     padding-right: 18px;
+    background-image: url($ui-image-path + 'toggle-selected' + $image-extension);
+    span {
+      color: $toggle-on-text;
+    }
   }
   &.flag-unselected {
     padding-left: 18px;
+    background-image: url($ui-image-path + 'toggle-unselected' + $image-extension);
+    span {
+      color: $toggle-off-text;
+    }
   }
   span {
     font-family: "Noto Sans", sans-serif;
-    color: $white;
     font-size: $font-size;
     forced-color-adjust: none;
   }
-}
-
-.light-theme .flag-selected {
-  background-image: url($ui-image-path + 'toggle-selected-blue' + $image-extension);
-}
-
-.dark-theme .flag-selected {
-  background-image: url($ui-image-path + 'toggle-selected-blue' + $image-extension);
-}
-
-.light-gray-theme .flag-selected {
-  background-image: url($ui-image-path + 'toggle-selected-gray' + $image-extension);
-}
-
-.dark-gray-theme .flag-selected {
-  background-image: url($ui-image-path + 'toggle-selected-gray' + $image-extension);
-}
-
-.light-theme .flag-unselected {
-  background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
-  > span {
-    color: $dark-blue;
-  }
-}
-
-.dark-theme .flag-unselected {
-  background-image: url($ui-image-path + 'toggle-unselected-light' + $image-extension);
-  > span {
-    color: $dark-blue;
-  }
-}
-
-.light-gray-theme .flag-unselected {
-  background-image: url($ui-image-path + 'toggle-unselected-gray' + $image-extension);
-}
-
-.dark-gray-theme .flag-unselected {
-  background-image: url($ui-image-path + 'toggle-unselected-dark' + $image-extension);
 }
 
 @media (max-width: 767px) {
   div.symbol-list-table {
     div.symbol-list-cell.symbol-list-cell-text {
       padding-right: 0;
-
       hr {
         margin-right: 0;
       }

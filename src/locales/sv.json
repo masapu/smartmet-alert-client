@@ -191,5 +191,7 @@
   "warningsInEffect": "varningar i kraft i",
   "landAreas": "landområden och",
   "seaAreas": "havsområden",
-  "grayScale": "Gråskala"
+  "grayScale": "Gråskala",
+  "toggleOn": "On",
+  "toggleOff": "Off"
 }
