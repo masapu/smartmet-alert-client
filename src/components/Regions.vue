@@ -205,7 +205,7 @@ div.accordion {
   border: 0.5px solid $variant-gray-darker;
   border-radius: 0;
   > * + * {
-    border-top: 1px solid $variant-gray-darker;
+    border-top: 0.5px solid $variant-gray-darker;
   }
 }
 </style>

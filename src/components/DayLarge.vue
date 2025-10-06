@@ -189,8 +189,9 @@ div.warning-map-status {
 }
 
 div.data-providers {
+  position: relative;
   text-align: right;
-  z-index: 5;
+  z-index: 15;
   pointer-events: none;
   padding-left: 50%;
   margin-top: -50px;
