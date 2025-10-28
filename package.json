@@ -1,5 +1,5 @@
 {
-  "name": "@fmidev/smartmet-alert-client",
+  "name": "smartmet-alert-client",
   "version": "4.4.19",
   "description": "Web application for viewing weather and flood alerts",
   "author": "Finnish Meteorological Institute",
