@@ -4,7 +4,7 @@
   "description": "Web application for viewing weather and flood alerts",
   "author": "Finnish Meteorological Institute",
   "license": "MIT",
-  "main": "dist/index.mjs",
+  "main": "dist/index.js",
   "type": "module",
   "repository": {
     "type": "git",
